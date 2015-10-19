@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 	resources :articles
-
+	resources :articles do
+		resources :comments
+	end
 	get "welcome/index"
 	get "static_pages/home"
 	get "static_pages/help"
